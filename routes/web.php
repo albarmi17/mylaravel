@@ -11,6 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+	
+Route::get('/halaman/{page}', function ($page) {
+    return "Kamu sedang mengakses halaman ".$page;
 });
+
+Route::get('/index', function () {
+	echo "<a href='".route('create')."'>Akses Route dengan nama </a>";
+});
+Route::get('/create', function () {
+	echo "Route diakses menggunakan nama";
+})->name('create');
+
+
+Route::get('/edit/{nama}', function ($nama) {
+	echo "Nilai Parameter Adalah ".$nama;
+})->where('nama','[A-Za-z]+');
+
+//menambah route di app/http/controller/produkController.php
+Route::get('/produk', 'produkController@index');
