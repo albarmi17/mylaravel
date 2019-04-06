@@ -13,7 +13,7 @@ class UbahTabelProduk extends Migration
      */
     public function up()
     {
-         Schema::rename('produks', 'barang');
+        Schema::rename('produks', 'barangs');
     }
 
     /**
@@ -23,6 +23,6 @@ class UbahTabelProduk extends Migration
      */
     public function down()
     {
-       //
+        //
     }
 }

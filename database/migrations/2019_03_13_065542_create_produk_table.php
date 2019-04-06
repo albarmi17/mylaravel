@@ -15,7 +15,8 @@ $table->integer('harga_beli');
 $table->integer('harga_jual');
 $table->timestamps();
 });
-}public function down()
+}
+public function down()
 {
 Schema::dropIfExists('produks');
 }
